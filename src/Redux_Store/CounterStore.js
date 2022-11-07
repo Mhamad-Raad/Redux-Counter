@@ -20,28 +20,7 @@ const counterSlice = createSlice({
       state.showCounter = !state.showCounter;
     }
   }
-})
-
-const counterReducer = (state = initialState, action) => {
-  if (action.type === 'INCREMENT') {
-    return {
-      showCounter: state.showCounter,
-      count: state.count + 1,
-    };
-  } else if (action.type === 'DECREMENT') {
-    return {
-      showCounter: state.showCounter,
-      count: state.count - 1,
-    };
-  } else if (action.type === "TOGGLE") {
-    return {
-      showCounter: !state.showCounter,
-      count: state.count,
-    };
-  }
-
-  return state;
-};
+});
 
 const store = configureStore({
   reducer: counterSlice.reducer
